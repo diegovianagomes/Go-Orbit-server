@@ -19,6 +19,16 @@ type PostgreSQLGoalCompletionRepository struct {
 	db *pgx.Conn
 }
 
+// CreateGoal implements GoalRepository.
+func (r *PostgreSQLGoalCompletionRepository) CreateGoal(ctx context.Context, goal models.Goal) error {
+	return nil
+}
+
+// GetGoals implements GoalRepository.
+func (r *PostgreSQLGoalCompletionRepository) GetGoals(ctx context.Context) ([]models.Goal, error) {
+	return nil, nil
+}
+
 func NewGoalCompletionRepository(db *pgx.Conn) *PostgreSQLGoalCompletionRepository {
 	return &PostgreSQLGoalCompletionRepository{db: db}
 }
